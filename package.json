@@ -1,8 +1,8 @@
 {
   "name": "GoDe",
-  "displayName": "GoDE - AI Theme Control + Audio Visualizer",
-  "description": "AI-controlled dynamic theme manipulation via MCP with audio-reactive themes and mel spectrogram visualizer",
-  "version": "0.1.0",
+  "displayName": "GoDE - God Mode for VSCode",
+  "description": "Complete VSCode control through AI chat - themes, workspace, editor, terminal, and visual effects via MCP",
+  "version": "0.2.0",
   "publisher": "8b",
   "engines": {
     "vscode": "^1.105.0"

@@ -1,8 +1,21 @@
-# GoDE - AI Theme Control + Audio Visualizer
+# GoDE - God Mode for VSCode
 
-AI-controlled dynamic theme manipulation for VSCode via Model Context Protocol (MCP), now with audio-reactive themes and a mel spectrogram visualizer!
+**Complete VSCode control through AI chat** - Manipulate everything from themes to terminals, files to effects, all through natural language!
 
-> "Finally, an AI that can fix my terrible color choices AND make them dance to music!" - Every developer, ever
+> "It's like having a remote control for VSCode, but the remote is an AI that speaks English!" - Every developer, ever
+
+## What is God Mode?
+
+GoDE gives you **omnipotent control** over VSCode through MCP (Model Context Protocol). Chat with your AI assistant to control:
+
+- 🎨 **Themes** - Dynamic colors, audio-reactive theming, visual effects
+- 📁 **Workspace** - Create, delete, move files; run tasks; search codebase
+- ✏️ **Editor** - Open, close, split tabs; format code; insert text
+- 💻 **Terminal** - Create terminals, execute commands, manage processes
+- ✨ **Effects** - Matrix rain, neon pulse, glitch, plasma, and more!
+- ⏮️ **History** - Undo/redo theme changes with full history tracking
+
+All through simple natural language commands to your AI!
 
 ## Features
 
@@ -55,9 +68,54 @@ Instantly transform your editor with professionally designed color schemes:
 - **Accessibility Helper**: Automatically adjust colors to meet WCAG standards
 - **Custom Mood Creator**: Generate a full theme from any base color
 
+## God Mode Powers
+
+### Workspace Control
+Ask your AI to manipulate your workspace:
+- "List all TypeScript files in the project"
+- "Create a new file at src/utils/helpers.ts"
+- "Show me the workspace structure"
+- "Search for 'TODO' in all files"
+- "Run the build task"
+- "Delete the temp folder"
+
+### Editor Mastery
+Control your editor like a pro:
+- "Open src/main.ts in a split view"
+- "Close all editors"
+- "Go to line 42"
+- "Insert 'console.log' at cursor"
+- "Format this document"
+- "Toggle zen mode"
+- "Set font size to 16"
+
+### Terminal Ninja
+Command-line control through chat:
+- "Create a new terminal called 'dev server'"
+- "Run 'npm install' in terminal"
+- "List all open terminals"
+- "Execute 'git status'"
+- "Clear the terminal"
+
+### Visual Effects Magic
+Make coding beautiful:
+- "Start matrix rain effect"
+- "Show me neon pulse with high intensity"
+- "Enable glitch effect for 30 seconds"
+- "List all available effects"
+- "Stop all effects"
+
+Effects include: matrix-rain, neon-pulse, glitch, particles, code-rain, starfield, plasma, wave
+
+### Theme Time Travel
+Never lose your perfect theme:
+- "Undo the last theme change"
+- "Redo theme change"
+- "Show me theme history"
+
 ## Usage with AI Assistants
 
-Once installed, AI assistants with MCP support can control your theme:
+Once installed, AI assistants with MCP support can control everything:
 
 **Basic color control:**
 - "Make the sidebar darker"
@@ -79,9 +137,9 @@ Once installed, AI assistants with MCP support can control your theme:
 
 ## MCP Tools
 
-The extension provides 12 powerful tools for AI assistants:
+The extension provides **50+ powerful tools** for AI assistants across 6 categories:
 
-### Basic Color Control
+### Theme Control (12 tools)
 
 #### `listColorGroups`
 See available color categories (editor, sidebar, chat, terminal, notifications, statusBar, git)
@@ -157,6 +215,122 @@ Adjust a foreground color to meet WCAG readability standards
 - `foreground` (string): Foreground color in hex format
 - `background` (string): Background color in hex format
 - `targetRatio` (number, optional): Target contrast ratio (4.5 for AA, 7.0 for AAA, default: 4.5)
+
+### Workspace Control (9 tools)
+
+#### `listFiles`
+List all files in workspace with optional glob pattern
+
+#### `getWorkspaceTree`
+Get workspace structure as a tree (max depth customizable)
+
+#### `createFile`
+Create new file with optional content
+
+#### `deleteFile`
+Delete file or folder (moves to trash for safety)
+
+#### `renameFile`
+Rename or move files/folders
+
+#### `listTasks`
+Get all workspace tasks
+
+#### `runTask`
+Execute a workspace task by name
+
+#### `searchWorkspace`
+Search for text across all files with pattern matching
+
+#### `getWorkspaceInfo`
+Get workspace information (name, folders, etc.)
+
+### Editor Control (14 tools)
+
+#### `getOpenEditors`
+List all open editor tabs with metadata
+
+#### `openFile`
+Open file in editor with view column and preview options
+
+#### `closeEditor` / `closeAllEditors`
+Close specific or all editor tabs
+
+#### `splitEditor`
+Split editor horizontally or vertically
+
+#### `navigateEditor`
+Navigate between editors (next, previous, first, last)
+
+#### `getActiveEditor`
+Get info about currently active editor
+
+#### `insertText`
+Insert text at cursor position
+
+#### `goToLine`
+Jump to specific line number
+
+#### `formatDocument`
+Format the active document
+
+#### `toggleZenMode`
+Toggle distraction-free zen mode
+
+#### `setFontSize`
+Change editor font size (6-100)
+
+### Terminal Control (5 tools)
+
+#### `listTerminals`
+List all open terminals with IDs
+
+#### `createTerminal`
+Create new terminal with custom name and working directory
+
+#### `executeCommand`
+Execute command in specific or new terminal
+
+#### `closeTerminal`
+Close a terminal by ID
+
+#### `clearTerminal`
+Clear terminal output
+
+### Visual Effects (5 tools)
+
+#### `startEffect`
+Start visual effect (matrix-rain, neon-pulse, glitch, particles, code-rain, starfield, plasma, wave)
+
+**Parameters:**
+- `effect` (string): Effect type
+- `intensity` (number, optional): 0-100, default 50
+- `speed` (number, optional): 0-100, default 50
+- `duration` (number, optional): Duration in ms, 0 = infinite
+- `colors` (array, optional): Custom color palette
+
+#### `stopEffect`
+Stop specific effect by ID
+
+#### `stopAllEffects`
+Stop all running effects
+
+#### `listEffects`
+Get all available effects with descriptions
+
+#### `getActiveEffects`
+Get currently running effects
+
+### Theme History (3 tools)
+
+#### `undoTheme`
+Undo to previous theme state
+
+#### `redoTheme`
+Redo to next theme state
+
+#### `getThemeHistory`
+View complete theme change history
 
 ## Audio Player
 
@@ -242,6 +416,19 @@ Press F5 to launch Extension Development Host
 ```
 
 ## Changelog
+
+### v0.2.0 (2025-11-12) - God Mode Release! 🎮
+
+**BREAKING**: Now a complete VSCode control system, not just theme manipulation!
+
+- 🎮 **GOD MODE**: Complete VSCode control through AI chat
+- 📁 **Workspace Control**: 9 new tools (files, folders, tasks, search)
+- ✏️ **Editor Control**: 14 new tools (tabs, splits, navigation, formatting)
+- 💻 **Terminal Control**: 5 new tools (create, execute, manage terminals)
+- ✨ **Visual Effects**: 8 awesome effects (matrix rain, neon pulse, glitch, plasma, etc.)
+- ⏮️ **Theme History**: Undo/redo with full history tracking
+- 🔧 **50+ Total Tools**: Comprehensive VSCode automation
+- 🎨 **Rebranded**: GoDE = God Mode for VSCode
 
 ### v0.1.0 (2025-11-09)
 - 🎨 Added 12 beautiful mood presets
