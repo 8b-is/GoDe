@@ -18,7 +18,7 @@ export class AdvancedColorOps {
      */
     public static generateHarmony(baseColor: string, type: 'analogous' | 'complementary' | 'triadic' | 'tetradic' | 'split-complementary' | 'square'): ColorHarmony | null {
         const color = tinycolor(baseColor);
-        if (!color.isValid()) return null;
+        if (!color.isValid()) {return null;}
 
         let colors: string[] = [];
         let name = '';
@@ -111,7 +111,7 @@ export class AdvancedColorOps {
      */
     public static generateMonochromatic(baseColor: string, count: number = 9): string[] {
         const color = tinycolor(baseColor);
-        if (!color.isValid()) return [];
+        if (!color.isValid()) {return [];}
 
         const palette: string[] = [];
         const step = 100 / (count - 1);
@@ -131,7 +131,7 @@ export class AdvancedColorOps {
      */
     public static generateTonal(baseColor: string, count: number = 9): string[] {
         const color = tinycolor(baseColor);
-        if (!color.isValid()) return [];
+        if (!color.isValid()) {return [];}
 
         const palette: string[] = [];
         const hsl = color.toHsl();
@@ -168,10 +168,10 @@ export class AdvancedColorOps {
      * Blend multiple colors together
      */
     public static blendColors(colors: string[], mode: 'average' | 'multiply' | 'screen' = 'average'): string | null {
-        if (colors.length === 0) return null;
+        if (colors.length === 0) {return null;}
 
         const validColors = colors.map(c => tinycolor(c)).filter(c => c.isValid());
-        if (validColors.length === 0) return null;
+        if (validColors.length === 0) {return null;}
 
         if (mode === 'average') {
             let r = 0, g = 0, b = 0;
@@ -218,7 +218,7 @@ export class AdvancedColorOps {
      */
     public static adjustTemperature(color: string, amount: number): string | null {
         const c = tinycolor(color);
-        if (!c.isValid()) return null;
+        if (!c.isValid()) {return null;}
 
         // Positive amount = warmer (shift toward orange)
         // Negative amount = cooler (shift toward blue)
@@ -314,7 +314,7 @@ export class AdvancedColorOps {
      */
     public static getPerceivedBrightness(color: string): number {
         const c = tinycolor(color);
-        if (!c.isValid()) return 0;
+        if (!c.isValid()) {return 0;}
 
         const rgb = c.toRgb();
         // Use perceived luminance formula
@@ -328,7 +328,7 @@ export class AdvancedColorOps {
         const fg = tinycolor(foreground);
         const bg = tinycolor(background);
 
-        if (!fg.isValid() || !bg.isValid()) return foreground;
+        if (!fg.isValid() || !bg.isValid()) {return foreground;}
 
         let attempts = 0;
         let current = fg.clone();
@@ -412,8 +412,8 @@ export class AdvancedColorOps {
         }
 
         let result = start + diff * t;
-        if (result < 0) result += 360;
-        if (result >= 360) result -= 360;
+        if (result < 0) {result += 360;}
+        if (result >= 360) {result -= 360;}
 
         return result;
     }

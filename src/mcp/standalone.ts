@@ -301,7 +301,7 @@ async function main() {
 
       case 'getColorsInGroup': {
         // Get all colors in a specific group with current values
-        if (!args) throw new Error('Missing arguments for getColorsInGroup');
+        if (!args) {throw new Error('Missing arguments for getColorsInGroup');}
         const groupId = args.group as string;
 
         const group = colorGroups[groupId];
@@ -338,7 +338,7 @@ async function main() {
 
       case 'setColor': {
         // Set a specific color key to a new value
-        if (!args) throw new Error('Missing arguments for setColor');
+        if (!args) {throw new Error('Missing arguments for setColor');}
         const key = args.key as string;
         const value = args.value as string;
 
@@ -375,7 +375,7 @@ async function main() {
 
       case 'getColor': {
         // Get the current value of a specific color key
-        if (!args) throw new Error('Missing arguments for getColor');
+        if (!args) {throw new Error('Missing arguments for getColor');}
         const key = args.key as string;
 
         // Get color via bridge
@@ -448,7 +448,7 @@ async function main() {
 
       case 'applyMoodPreset': {
         // Apply a mood preset
-        if (!args) throw new Error('Missing arguments for applyMoodPreset');
+        if (!args) {throw new Error('Missing arguments for applyMoodPreset');}
         const presetName = args.name as string;
 
         const preset = MoodPresetsManager.getPreset(presetName);
@@ -483,7 +483,7 @@ async function main() {
 
       case 'generateColorHarmony': {
         // Generate color harmony from base color
-        if (!args) throw new Error('Missing arguments for generateColorHarmony');
+        if (!args) {throw new Error('Missing arguments for generateColorHarmony');}
         const baseColor = args.baseColor as string;
         const harmonyType = args.harmonyType as 'analogous' | 'complementary' | 'triadic' | 'tetradic' | 'split-complementary' | 'square';
 
@@ -513,7 +513,7 @@ async function main() {
 
       case 'generateGradient': {
         // Generate color gradient
-        if (!args) throw new Error('Missing arguments for generateGradient');
+        if (!args) {throw new Error('Missing arguments for generateGradient');}
         const startColor = args.startColor as string;
         const endColor = args.endColor as string;
         const steps = (args.steps as number) || 10;
@@ -544,7 +544,7 @@ async function main() {
 
       case 'adjustColorTemperature': {
         // Adjust color temperature
-        if (!args) throw new Error('Missing arguments for adjustColorTemperature');
+        if (!args) {throw new Error('Missing arguments for adjustColorTemperature');}
         const color = args.color as string;
         const amount = args.amount as number;
 
@@ -574,7 +574,7 @@ async function main() {
 
       case 'ensureReadableColor': {
         // Ensure color readability
-        if (!args) throw new Error('Missing arguments for ensureReadableColor');
+        if (!args) {throw new Error('Missing arguments for ensureReadableColor');}
         const foreground = args.foreground as string;
         const background = args.background as string;
         const targetRatio = (args.targetRatio as number) || 4.5;
@@ -604,7 +604,7 @@ async function main() {
 
       case 'createCustomMood': {
         // Create and apply custom mood preset
-        if (!args) throw new Error('Missing arguments for createCustomMood');
+        if (!args) {throw new Error('Missing arguments for createCustomMood');}
         const baseColor = args.baseColor as string;
         const name = (args.name as string) || 'Custom Mood';
 

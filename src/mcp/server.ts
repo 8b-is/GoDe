@@ -131,13 +131,13 @@ export class ThemeMCPServer {
         case 'listColorGroups':
           return this.handleListColorGroups();
         case 'getColorsInGroup':
-          if (!args) throw new Error('Missing arguments for getColorsInGroup');
+          if (!args) {throw new Error('Missing arguments for getColorsInGroup');}
           return this.handleGetColorsInGroup(args.group as string);
         case 'setColor':
-          if (!args) throw new Error('Missing arguments for setColor');
+          if (!args) {throw new Error('Missing arguments for setColor');}
           return this.handleSetColor(args.key as string, args.value as string);
         case 'getColor':
-          if (!args) throw new Error('Missing arguments for getColor');
+          if (!args) {throw new Error('Missing arguments for getColor');}
           return this.handleGetColor(args.key as string);
         case 'resetColors':
           return this.handleResetColors();

@@ -134,7 +134,7 @@ export class MoodPresetsManager {
         const preset = this.presets.find(p =>
             p.name.toLowerCase() === name.toLowerCase()
         );
-        if (!preset) return undefined;
+        if (!preset) {return undefined;}
 
         return {
             ...preset,

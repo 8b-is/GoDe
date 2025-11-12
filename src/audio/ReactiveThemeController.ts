@@ -15,7 +15,7 @@ export class ReactiveThemeController {
     }
 
     public activate() {
-        if (this.isActive) return;
+        if (this.isActive) {return;}
 
         this.isActive = true;
         this.captureBaseColors();
@@ -23,7 +23,7 @@ export class ReactiveThemeController {
     }
 
     public deactivate() {
-        if (!this.isActive) return;
+        if (!this.isActive) {return;}
 
         this.isActive = false;
         this.restoreBaseColors();
@@ -53,7 +53,7 @@ export class ReactiveThemeController {
     }
 
     public processAudioData(data: AudioAnalysisData) {
-        if (!this.isActive) return;
+        if (!this.isActive) {return;}
 
         // Map audio features to color parameters with smoothing
         const targetHue = Math.floor(data.dominantFreq * 360); // Frequency to hue
