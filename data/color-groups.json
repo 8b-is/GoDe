@@ -1,0 +1,104 @@
+{
+  "editor": {
+    "name": "Editor Core",
+    "description": "Main code editing area",
+    "keys": [
+      "editor.background",
+      "editor.foreground",
+      "editor.lineHighlightBackground",
+      "editorCursor.foreground",
+      "editor.selectionBackground",
+      "editor.selectionHighlightBackground",
+      "editor.wordHighlightBackground",
+      "editor.wordHighlightStrongBackground",
+      "editorWhitespace.foreground"
+    ],
+    "commonIntents": ["background", "text color", "cursor", "selection", "highlight"]
+  },
+  "sidebar": {
+    "name": "Sidebar & File Explorer",
+    "description": "File explorer and side panels",
+    "keys": [
+      "sideBar.background",
+      "sideBar.foreground",
+      "sideBar.border",
+      "sideBarTitle.foreground",
+      "sideBarSectionHeader.background",
+      "sideBarSectionHeader.foreground"
+    ],
+    "commonIntents": ["file tree", "explorer", "sidebar"]
+  },
+  "chat": {
+    "name": "AI Chat Interface",
+    "description": "AI chat and inline suggestions",
+    "keys": [
+      "chat.requestBackground",
+      "chat.requestBorder",
+      "chat.requestBubbleBackground",
+      "chat.requestBubbleHoverBackground",
+      "chat.avatarBackground",
+      "chat.avatarForeground",
+      "chat.slashCommandBackground",
+      "chat.slashCommandForeground",
+      "inlineChat.background",
+      "inlineChat.border",
+      "inlineChatInput.background"
+    ],
+    "commonIntents": ["chat bubbles", "assistant", "ai interface"]
+  },
+  "terminal": {
+    "name": "Terminal",
+    "description": "Integrated terminal colors",
+    "keys": [
+      "terminal.background",
+      "terminal.foreground",
+      "terminal.ansiBlack",
+      "terminal.ansiRed",
+      "terminal.ansiGreen",
+      "terminal.ansiYellow",
+      "terminal.ansiBlue",
+      "terminal.ansiMagenta",
+      "terminal.ansiCyan",
+      "terminal.ansiWhite"
+    ],
+    "commonIntents": ["terminal", "console", "command line"]
+  },
+  "notifications": {
+    "name": "Notifications",
+    "description": "Alerts, warnings, and info messages",
+    "keys": [
+      "notifications.background",
+      "notifications.foreground",
+      "notifications.border",
+      "notificationLink.foreground",
+      "notificationsErrorIcon.foreground",
+      "notificationsWarningIcon.foreground",
+      "notificationsInfoIcon.foreground"
+    ],
+    "commonIntents": ["alerts", "warnings", "popups", "messages"]
+  },
+  "statusBar": {
+    "name": "Status Bar",
+    "description": "Bottom status bar",
+    "keys": [
+      "statusBar.background",
+      "statusBar.foreground",
+      "statusBar.border",
+      "statusBar.debuggingBackground",
+      "statusBarItem.prominentBackground"
+    ],
+    "commonIntents": ["status bar", "bottom bar"]
+  },
+  "git": {
+    "name": "Git Decorations",
+    "description": "Git status indicators",
+    "keys": [
+      "gitDecoration.modifiedResourceForeground",
+      "gitDecoration.deletedResourceForeground",
+      "gitDecoration.untrackedResourceForeground",
+      "gitDecoration.ignoredResourceForeground",
+      "gitDecoration.conflictingResourceForeground"
+    ],
+    "commonIntents": ["git", "version control", "changes"]
+  }
+}

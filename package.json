@@ -1,0 +1,68 @@
+{
+  "name": "GoDe",
+  "displayName": "GoDE - AI Theme Control + Audio Visualizer",
+  "description": "AI-controlled dynamic theme manipulation via MCP with audio-reactive themes and mel spectrogram visualizer",
+  "version": "0.1.0",
+  "publisher": "8b",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Themes",
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "GoDe.showStatus",
+        "title": "GoDE: Show Status"
+      }
+    ],
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "GoDe-provider",
+        "label": "GoDE - AI Theme Control"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "GoDE.audioPlayer",
+          "name": "Audio Player & Visualizer"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "GoDE.audioPlayer",
+        "contents": "Load an audio file to see the mel spectrogram visualization and enable audio-reactive theming!"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "@types/tinycolor2": "^1.4.6",
+    "@types/vscode": "^1.105.0",
+    "@typescript-eslint/eslint-plugin": "^7.x",
+    "@typescript-eslint/parser": "^7.x",
+    "eslint": "^8.x",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "tinycolor2": "^1.6.0",
+    "wcag-contrast": "^3.0.0"
+  }
+}
