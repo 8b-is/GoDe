@@ -32,7 +32,7 @@ import { BridgeClient } from '../bridge/client';
 import { ColorManipulator } from '../colors/manipulation';
 import { AdvancedColorOps } from '../colors/advanced';
 import { MoodPresetsManager } from '../themes/MoodPresets';
-import * as colorGroupsData from '../../data/color-groups.json';
+import colorGroupsData from '../../data/color-groups.json';
 import { ColorGroups } from '../colors/groups';
 
 /**
